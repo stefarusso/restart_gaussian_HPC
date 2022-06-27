@@ -17,7 +17,7 @@ export GAUSS_SCRDIR=$CINECA_SCRATCH/g16_$SLURM_JOBID  # def. tmp folder in $CINE
 mkdir  -p $GAUSS_SCRDIR                      # the dir must exist
 
 # CHECK THAT RWF IS PRESENT
-set -- rwf*
+set -- *rwf
 if [ ! -f "$1" ]
 then
 timeout 5m g16 < *first.com > first.log
